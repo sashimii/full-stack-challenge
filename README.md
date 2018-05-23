@@ -1,9 +1,10 @@
 # PayTM Challenge (incomplete)
 
+* Used my personal boilerplate for this: https://github.com/sashimii/react-starteroni
 * Implemented API calls for employee related CRUD operations using:
   * express 4.x
   * body-parser
-  * sequelize for the ORM 
+  * sequelize for the ORM
   * Postgres SQL for the db
 * Webpack config is mine, with the following:
   * ES2015/ES2016/ES2017
