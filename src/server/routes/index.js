@@ -6,6 +6,11 @@ import {
   updateEmployee,
   removeEmployee
 } from './employees';
+
+import { getAllReviews, getReview, addReview, editReview } from './reviews';
+
+import { assignReview } from './assignments';
+
 import sequelize from '../model';
 
 sequelize

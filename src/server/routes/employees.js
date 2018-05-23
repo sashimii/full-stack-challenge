@@ -33,20 +33,23 @@ export const removeEmployee = (req, res) => {
       res.send(`Deleted ${req.params.username}`);
     })
     .catch(() => {
-      res.status(404).send(`User Not Found`);
+      res.sendStatus(404).send(`User Not Found`);
     });
   console.log('REMOVING EMPLOYEE');
 };
 
 export const updateEmployee = (req, res) => {
   let validUpdatedEmployee = getValidObject(req.body);
-
   Employee.update(validUpdatedEmployee, {
     where: {
       username: req.params.username
     }
   }).then(() => {
-    res.send({ updated: true });
+    Employee.findOrCreate({
+      where: { username: req.params.username }
+    }).then(employee => {
+      res.send(employee);
+    });
   });
   console.log('UPDATING EMPLOYEE');
 };
@@ -54,17 +57,27 @@ export const updateEmployee = (req, res) => {
 export const getEmployee = (req, res) => {
   Employee.find({ where: { username: req.params.username } })
     .then(employee => {
-      res.send(employee);
+      if (employee !== null) {
+        res.send(employee);
+      } else {
+        res.sendStatus(404).send('Not found');
+      }
     })
-    .catch(err => {
-      res.status(404).send('Not found');
-    });
+    .catch(err => {});
 };
 
 export const getAllEmployees = (req, res) => {
   Employee.findAll({
     order: [['lastName', 'ASC']]
-  }).then(employees => {
-    res.send(employees);
-  });
+  })
+    .then(employees => {
+      if (employees !== null) {
+        res.send(employees);
+      } else {
+        res.sendStatus(404).send('Not found');
+      }
+    })
+    .catch(err => {
+      res.sendStatus(404).send('404 Not Found');
+    });
 };
