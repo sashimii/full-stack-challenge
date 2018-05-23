@@ -9,7 +9,6 @@ import { minify } from 'html-minifier';
 
 import apiRouter from './routes';
 
-import Paragraph from '../client/components/ui/Paragraph.react';
 import App from '../client/components/App.react';
 
 const PORT = 3000;
