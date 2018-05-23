@@ -25,9 +25,13 @@ Place an `.env` file in the root with the variable `POSTGRES_URL=postgres://user
 Run the following commands:
 
 `npm install -g yarn`
+
 `yarn`
+
 `npm run pretty:js`
+
 `npm run build:dev`
+
 `npm run dev:app`
 
 
