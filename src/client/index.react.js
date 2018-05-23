@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import appState from './redux/reducers';
 import App from './components/App.react';
-import ProductDescription from './components/ProductDescription.react';
 
 import axios from 'axios';
 
@@ -26,12 +25,6 @@ const { dispatch } = store;
 // import config from './config';
 
 const AppRouter = () => {};
-
-axios.get('http://localhost:8082/products').then(res => {
-  // console.log(res.data);
-  store.dispatch(updateCurrentProductView(res.data));
-  console.log(store.getState());
-});
 
 ReactDOM.render(
   <Provider store={store}>

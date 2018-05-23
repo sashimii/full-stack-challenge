@@ -1,3 +1,37 @@
+# PayTM Challenge (incomplete)
+
+* Implemented API calls for employee related CRUD operations using:
+  * express 4.x
+  * body-parser
+  * sequelize for the ORM 
+  * Postgres SQL for the db
+* Webpack config is mine, with the following:
+  * ES2015/ES2016/ES2017
+  * Flowtype for static typing
+  * Jest for Unit Testing
+  * CSS Modules for styles
+  * ESLint & Sass-Lint
+  * Pre-commit githooks that checks if tests pass first
+* Universal Javascript
+* Incomplete Front End
+
+## Starting It Up
+
+Make sure you have Node v8.4.x
+
+Place an `.env` file in the root with the variable `POSTGRES_URL=postgres://user:pass@server.tdl:port/db-name`
+
+Run the following commands:
+
+`npm install -g yarn`
+`yarn`
+`npm run pretty:js`
+`npm run build:dev`
+`npm run dev:app`
+
+
+Or, if you are comfortable in running the above commands in succession, use the command `npm run provision`
+
 # Full Stack Developer Challenge
 This is an interview challenge for Paytm Labs. Please feel free to fork. Pull Requests will be ignored.
 
@@ -22,7 +56,7 @@ Design a web application that allows employees to submit feedback toward each ot
   * Most full stack web developers at Paytm Labs currently use Node.js and/or Ruby on Rails on the server (with MySQL for the database), but feel free to use other tech if you prefer
 * Web app
   * Implementation of 2-5 web pages using a modern web framework (preferably React) that talks to server side
-    * This should integrate with your API, but it's fine to use static responses for some of it 
+    * This should integrate with your API, but it's fine to use static responses for some of it
 * Document all assumptions made
 * Complete solutions aren't required, but what you do submit needs to run.
 

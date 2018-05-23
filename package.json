@@ -13,8 +13,8 @@
     "flow": "flow",
     "dev:app": "webpack-dev-server --env=dev --progress --profile --colors",
     "dev:api": "json-server --watch json/db.json --port 8082",
-    "build:dev": "webpack --env=dev --progress --profile --colors",
-    "build:dist": "webpack --env=prod --progress --profile --colors"
+    "build:dev": "npm run pretty:js && webpack --env=dev --progress --profile --colors",
+    "build:dist": "npm run pretty:js && webpack --env=prod --progress --profile --colors"
   },
   "jest": {
     "collectCoverage": true,

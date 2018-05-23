@@ -13,7 +13,7 @@ const NavigationBar = ({}) => {
     <div styleName="navbar-container">
       <div styleName="navbar-container--padded">
         <div styleName="navbar-logo">
-          <Logo wordmark="SIXURB" />
+          <Logo wordmark="Employee Reviews" />
         </div>
         <div styleName="navbar-hamburger">
           <Hamburger />

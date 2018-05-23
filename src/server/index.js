@@ -12,6 +12,8 @@ import apiRouter from './routes';
 import Paragraph from '../client/components/ui/Paragraph.react';
 import App from '../client/components/App.react';
 
+const PORT = 3000;
+
 // do not call this before your application component has been imported
 const initialStyleTag = collectInitial();
 
@@ -60,6 +62,6 @@ viewsRouter.get('/', function(req, res) {
 app.use('/', viewsRouter);
 app.use('/api', apiRouter);
 
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+app.listen(PORT, function() {
+  console.log(`App is listening on port ${PORT}`);
 });
